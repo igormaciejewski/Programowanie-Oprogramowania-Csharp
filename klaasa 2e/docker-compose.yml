@@ -1,0 +1,29 @@
+version: '4'
+
+networks:
+  mysql-net2:
+    driver: bridge
+
+volumes:
+  mysql-vol:
+
+services:
+  mysql:
+    container_name: mysql-1
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    ports:
+      - 3307:3306
+    volumes:
+      - mysql-vol:/var/lib/mysql
+    networks:
+      - mysql-net2
+
+  pma: #PHP My Admin
+    container_name: pma-1
+    image: phpmyadmin
+    ports:
+      - "8081:80"
+    networks:
+      - mysql-net2

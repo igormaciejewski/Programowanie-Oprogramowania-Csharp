@@ -1,0 +1,13 @@
+docker pull (np mysql)
+docker images list
+docker run (np mysql)
+docker ps
+docker network ls
+docker network create mysql-net
+docker stop 6566cbe87d54
+docker start 6566cbe87d54
+docker ps -a
+docker ps
+docker run --name mysql1 -e MYSQL_ROOT_PASSWORD=root --network mysql-net -p 3307:3306 mysql
+docker rm 6566cbe87d54
+docker rm -f 6566cbe87d54

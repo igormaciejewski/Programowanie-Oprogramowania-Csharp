@@ -1,0 +1,77 @@
+/*//Napisz alg sumujacy cyfry iteracyjnie i rekurrencyjnie
+int iter1(int n)
+{
+    int suma = 0;
+    for (int i = 0; i <= n; i++)
+    {
+        suma += i;
+    }
+    return suma;
+}
+Console.WriteLine(iter1(10));
+
+int reku1(int n)
+{
+    if (n == 0) return 0;
+    return reku1(n - 1) + n;
+}
+Console.WriteLine(reku1(10));*/
+
+
+//Z.4 napisz suma liczb parzystych 2 cyfrowtych i 2 cyfrowych
+
+
+int suma = 0;
+for (int i = 10; i < 100; i += 2)
+{
+    suma += i;
+}
+Console.WriteLine(suma);
+
+int reku(int n)
+{
+    if (n > 10) return 0;
+    return (n - 2) + n;
+}
+
+//Z.5 oblicz sume n pierwszych liczb ciagu
+//a) 3,6,9,12 ...
+int n = 3;
+int suma5a = 0;
+for (int i = 0; i < n; i++)
+{
+    suma5a += 3 * i + 3;
+}
+Console.WriteLine(suma5a);
+
+int reku5a(int n)
+{
+    if (n == 1) return 3;
+    return reku5a(n - 1) + 3 * n;
+}
+Console.WriteLine(reku5a(3));
+
+//b) 12, 23, 34 , 45 ...
+
+int suma5b = 0;
+for (int i = 0;i < n;i++)
+{
+    suma5b += 1 + ((i + 1) * 11);
+}
+Console.WriteLine(suma5b);
+
+int reku5b(int n)
+{
+    if (n == 1) return 12;
+    return reku5b(n - 1) + 11;
+}
+
+int suma5b2 = 0;
+for (int i = 0; i < n; i++)
+{
+    suma5b2 += reku5b(i + 1);
+}
+Console.WriteLine(suma5b2);
+// c) 2, 6, 18, 54
+
+// d) 

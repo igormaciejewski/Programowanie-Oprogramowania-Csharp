@@ -1,0 +1,103 @@
+/* typ nazwa ()
+{
+    instr
+    return ....
+}
+*/
+//napisz funkcje ktora sie przywita
+
+using System.Security.Cryptography.X509Certificates;
+
+void przywitaj()
+{
+    Console.WriteLine("siema");
+}
+przywitaj();
+
+//napisz funkcje ktora zwroci sume 2 wpisanych liczb
+
+void suma()
+{   
+    int x = int.Parse(Console.ReadLine());
+    int n = int.Parse(Console.ReadLine());  
+    int suma = x + n;
+    Console.WriteLine(suma);
+}
+suma();
+
+//nwm cos nowak zrobil
+int dodawanie(int a , int b)
+{
+    return a + b;
+}
+Console.WriteLine(dodawanie(4,8));
+
+//napisz funkcje ktora sumuje kazda liczbe 
+
+int suma2(int[] liczby)
+{
+    int suma2 = 0;
+    foreach (int item in liczby)
+    {
+        suma2 += suma2 + item;
+    }
+    return suma2;
+}
+Console.WriteLine(suma2(new int[] { 4, 5, 7 }));
+Console.WriteLine(suma2(new int[] { 5 , 6 , 7 }));
+
+// funkcja zwracajaca wpisany ciag odwrotnie 
+using System.ComponentModel.Design;
+
+string f1(string napis)
+{
+    char[] odw = napis.ToCharArray();
+    Array.Reverse(odw);
+    return new string(odw);
+}
+
+Console.WriteLine(f1("nigger"));
+
+// funkcja obliczajaca 45% z roznicy 2 wpisanych liczba (ma byc na plusie)
+
+double f2(int a , int b)
+{
+    return Math.Abs(a - b) * 0.45;
+}
+Console.WriteLine(f2(101, 1));
+// funkcja zwracajaca boola czy liczba jest wielokrotnoscia 13
+
+bool f3(int a)
+{
+    if (a % 13 == 0)
+    {
+        return true;
+    }
+    return false;
+}
+
+//silnia
+
+int silnia1(int n)
+{
+    if (n == 0) return 1;
+    int wynik = 1;
+    for (int i = 1; i < n; i++)
+    {
+        wynik = wynik * i;
+    }
+    return wynik;
+}
+Console.WriteLine(silnia1(10));
+
+int suma(int a)
+{
+    int suma = 0;
+    for (int i = 1; i < a + 1; i++)
+    {
+        suma = suma + i;
+    }
+    return suma;
+}
+Console.WriteLine(suma(10));
+

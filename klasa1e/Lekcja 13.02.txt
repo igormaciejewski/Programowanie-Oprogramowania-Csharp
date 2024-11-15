@@ -1,0 +1,109 @@
+// Tablice 1D
+// prosta deklaracja
+using System.Runtime.InteropServices;
+
+int[] T = new int[3];
+// definicja
+T[0] = 3;
+T[1] = 5;
+T[2] = 8;
+// mozna poloczyc deklaracje i definicje
+int[] S = new int[] {5, 7, 8, 9 , 10};
+// przejscie przez tablice - 2 podstawowe warianty przejsc
+for (int i = 0; i < S.Length; i++)
+{
+    Console.WriteLine(S[i]);
+}
+Console.WriteLine("\n\n");
+
+foreach (var item in S)
+{
+    Console.WriteLine(item);
+}
+Console.WriteLine("\n");
+// wypelnianie tablicy liczbami losowymi
+Random r = new Random();
+int n = 10;
+int[] L = new int[n];
+for (int i = 0; i < n; i++)
+{
+    L[i] = r.Next(21);
+    Console.WriteLine(L[i]);
+}
+Console.WriteLine("\n");
+
+//Tablice 2D
+
+int[,] M = new int[3, 2];
+M[0,1] = 3;
+M[1,1] = 2;
+M[2,1] = 1;
+Console.WriteLine(M[2,1]);
+
+int[,] N = new int[,] { { 2, 3, 4 ,5 }, { 7 ,8 , 9 ,10 },{16, 17, 18, 19}, };
+Console.WriteLine(N[1,3]);
+//pierwszy sposob
+for (int j = 0; j < N.Length; j++)
+{
+    Console.Write(N[j/4,j%4] + " ");
+}
+//drugi sposob
+for (int j = 0; j < N.Length; j++)
+{
+    Console.Write(N[j / N.GetLength(1), j % N.GetLength(1)] + " ");
+}
+//trzeci sposob (najlepszy)
+for (int j = 0; j < N.GetLength(0); j++)
+{
+    for (int y = 0; y < N.GetLength(1); y++)
+    {
+        Console.Write(N[j,y] + " ");
+    }
+    Console.WriteLine();
+}
+// Losowe generowanie macierzy 
+int b = 13;
+int m = 7;
+int[,] G = new int[b,m];
+for (int j = 0; j < G.GetLength(0); j++)
+{
+    for (int y = 0; y < G.GetLength(1); y++)
+    {
+        G[j, y] = r.Next(100, 1000);
+        Console.Write(G[j, y] + "\t ");
+    }
+    Console.WriteLine();
+}
+
+
+//Arraye
+using System.Collections;
+
+ArrayList AL = new ArrayList();
+AL.Add(1);
+AL.Add(2);
+AL.Add(3);
+AL.Add(4);
+// ..... ile chce arrayow
+
+Console.WriteLine(AL.Count);
+Console.WriteLine(AL[2]);
+AL.Remove(1);
+Console.WriteLine(AL.Count);
+AL.Remove(2);
+Console.WriteLine(AL.Count);
+
+//petla array - mozna stosowac for i foreach
+
+for (int i = 0; i< AL.Count; i++)
+{
+    Console.WriteLine(AL[i] + " ");
+}
+Console.WriteLine();
+
+foreach (var item in AL)
+{
+    Console.WriteLine(item + " ");
+
+}
+Console.WriteLine();

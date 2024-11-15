@@ -1,0 +1,38 @@
+using System.Collections;
+using System.Runtime.ExceptionServices;
+string line = System.IO.File.ReadAllText(@"D:\Technikum\Projektowanie oprogramowanie\odczytywanie_plikow.txt");
+Console.WriteLine(line);
+
+
+using System.Collections;
+using System.Runtime.ExceptionServices;
+string line = System.IO.File.ReadAllText(@"D:\Technikum\Projektowanie oprogramowanie\odczytywanie_plikow.txt");
+Console.WriteLine(line);
+
+ArrayList al = new ArrayList();
+
+for(int i = 0; i < al.Count; i++)
+{
+    al.Add(line);
+}
+al.Sort();
+Console.WriteLine();
+Console.WriteLine(line.Max());
+
+
+
+
+//Zadanie z matury 20.03.2023
+
+using System.Collections;
+using System.Runtime.ExceptionServices;
+string[] line = System.IO.File.ReadAllLines(@"D:\Technikum\Projektowanie oprogramowanie\odczytywanie_plikow.txt");
+Console.WriteLine(line);
+StreamWriter wynik = new(@"D:\Technikum\Projektowanie oprogramowanie\jakiesgownozmatury.txt");
+ArrayList L = new ArrayList();
+foreach (string item in line)
+{
+    L.Add(int.Parse(item));
+    wynik.WriteLine(Convert.ToString(item));
+}
+wynik.Close();

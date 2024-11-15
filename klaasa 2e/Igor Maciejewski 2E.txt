@@ -1,0 +1,89 @@
+//Z.0
+
+/*int[] t = new int[11];
+int srednia = 0;
+int powyzej = 0;
+int ponizej = 0;
+for (int i = 0;i < 11;i++)
+{
+    int n = int.Parse(Console.ReadLine());
+    Console.Write(" ");
+    t[i] = n;
+    srednia += n;
+}
+int sredniaWartosc = srednia / 11;
+for (int i = 0; i < t.Length;i++)
+{
+    if (t[i] > sredniaWartosc)
+    {
+        powyzej++;
+    }
+    else if (t[i] < sredniaWartosc) 
+    {
+        ponizej++;
+    }
+}
+
+if (powyzej > ponizej)
+{
+    Console.WriteLine("Tablica jest wielkomiejska");
+}
+else if (ponizej > powyzej)
+{
+    Console.WriteLine("Tablica jest Małorolna");
+}
+else if (ponizej == powyzej)
+{
+    Console.WriteLine("Tablica jest MałoMiasteczkowa");
+}
+*/
+
+//Z.1
+
+/*Random r = new Random();
+int[] t = new int[30];
+int elementpierwszy = 0;
+int elementostatni = 0;
+int suma = 0;
+List<int> list = new List<int>();
+for (int i = 0; i < t.Length; i++)
+{
+    t[i] = r.Next(100, 1000);
+    Console.Write($"{t[i]} ");
+}
+for (int i = 0; i < t.Length; i++)
+{
+    if (i == 0)
+    {
+        elementpierwszy = t[i];
+    }
+    else if (i == 1)
+    {
+        elementpierwszy = t[i];
+    }
+    else if (i > 1)
+    {
+        if (t[i - 1] > t[i - 2] && t[i - 1] < t[i])
+        {
+            elementpierwszy = t[i - 2];
+            elementostatni = t[i];
+            suma = elementpierwszy + elementostatni + t[i - 1];
+        }
+    }
+}
+Console.WriteLine(elementpierwszy);
+Console.WriteLine(elementostatni);
+Console.WriteLine(suma);
+*/
+
+
+//z.2
+Random r = new Random();
+List<int> lista1 = new List<int>();
+List<int> lista2 = new List<int>();
+List<int> lista3 = new List<int>();
+for (int i = 0; i < 6; i++)
+{
+    lista1.Add(r.Next(1, 10));
+    Console.Write(lista1[i]+ " ");
+}

@@ -1,0 +1,42 @@
+using System.Collections;
+using System.Runtime.ExceptionServices;
+
+bool czypierwsza(int n)
+{
+    for (int i = 2; i< n; i++)
+        if (n % i == 0)
+            return false;
+    return true;
+}
+
+string[] liczby = System.IO.File.ReadAllLines(@"D:\Technikum\Projektowanie oprogramowanie\Zadanie_z_matury\liczby_przyklad.txt");
+string[] pierwsze = System.IO.File.ReadAllLines(@"D:\Technikum\Projektowanie oprogramowanie\Zadanie_z_matury\liczby_przyklad.txt");
+Console.WriteLine(liczby);
+StreamWriter wynik = new(@"D:\Technikum\Projektowanie oprogramowanie\wyniki4_2.txt");
+ArrayList L = new ArrayList();
+foreach (string item in liczby)
+{
+    L.Add(int.Parse(item));
+}
+wynik.Close();
+foreach (int item in L)
+{
+    if (item >= 100 && item <= 5000 && czypierwsza(item))
+    {
+        wynik.WriteLine(item);
+    }
+}
+Console.WriteLine();
+wynik.WriteLine("zadanie4.2\n");
+
+foreach (string pierwsza in pierwsze)
+{
+    char[] odwrot = pierwsza.ToArray();
+    Array.Reverse(odwrot);
+
+    if (czypierwsza(int.Parse(pierwsza)) && czypierwsza(int.Parse(string.Join(",", odwrot)))) ;
+    {
+        wynik.WriteLine(pierwsza);
+    }
+}
+wynik.Close();

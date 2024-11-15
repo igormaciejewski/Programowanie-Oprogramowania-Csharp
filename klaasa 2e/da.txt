@@ -1,0 +1,106 @@
+  
+// // // Zad.1
+// int odejmowanie(int a, int b)
+// {
+//     while (a != b)
+//     {
+//         if (a > b) a = a - b;
+//         if (b > a) b = b - a;
+//     }
+//
+//     return a;
+// }
+//
+// Console.WriteLine(odejmowanie(10,5));
+
+// //Zad.2
+// int Modulo(int a, int b)
+// {
+//     int pom;
+//     while (a > 0)
+//     {
+//         pom = b;
+//         b = a % b;
+//         a = pom;
+//     }
+//     return a;
+// }
+// Console.WriteLine(Modulo(28,24));
+
+// //Zad.3 Napisz algorytm sortowania bombelkowego na tablicy
+//
+//
+//
+// int[] T = new int[20];
+// Random r = new Random();
+// for (int i = 0; i < T.Length; i++)
+// {
+//     T[i] = r.Next(0, 20);
+// }
+//
+// for (int i = 0; i < T.Length; i++)
+// {
+//     for (int j = 0; j < T.Length-1; j++)
+//     {
+//         if (T[j] > T[j + 1])
+//         {
+//             int temp = T[j];
+//             T[j] = T[j + 1];
+//             T[j + 1] = temp;
+//         }
+//     }
+// }
+//
+// for (int i = 0; i < T.Length; i++)
+// {
+//     Console.Write(T[i] + " ");
+// }
+
+// //Zad.4
+//
+// int dzielniki(int liczba)
+// {
+//     int dzielniczki = 0;
+//     for (int i = 1; i < liczba; i++)
+//     {
+//         if (liczba % i == 0)
+//         {
+//             dzielniczki += i;
+//         }
+//     }
+//     return dzielniczki;
+// }
+//
+// int pom;
+// for (int i = 0; i < 10000; i++)
+// {
+//     pom = dzielniki(i);
+//     if (i == dzielniki(pom) && i != pom)
+//     {
+//         Console.WriteLine(i + " " + pom);
+//     }
+// }
+
+//Zad.5
+Random r = new Random();
+int rozmiar = 10;
+int[,] tablica = new int[rozmiar, rozmiar];
+int suma = 0;
+for (int i = 0; i < 10; i++)
+{
+    for (int j = 0; j < 10; j++)
+    {
+        tablica[i, j] = r.Next(0, 10);
+    }
+
+}
+
+for (int i = 0; i < 10; i++)
+{
+    for (int j = 0; j < 10; j++)
+    {
+        Console.Write(tablica[i, j] + " ");
+    }
+    Console.WriteLine();
+}
+

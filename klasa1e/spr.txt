@@ -1,0 +1,203 @@
+// Utworzenie generatora liczb losowych
+using System.ComponentModel;
+
+/*Random gen = new Random();
+// Deklaracja tablicy T
+int[] T = new int[10];
+// Uzupełniamy tablicę losowymi liczbami
+for (int i = 0; i < T.Length; i++)
+{
+    T[i] = gen.Next(10, 20);
+    Console.WriteLine("Tablica: {0}", T[i]);
+}
+//Z.1
+int max = 10;
+for (int i = 0; i < T.Length; i++)
+{
+    if (max < T[i]) 
+        max = T[i];
+}
+Console.WriteLine("maksymalna wartosc w tablicy wynosi {0}", max);
+//Z.2
+int min = 99;
+for (int i = 0; i < T.Length; i++)
+{
+    if (min > T[i])
+        min = T[i];
+}
+Console.WriteLine("minimalna wartosc w tablicy wynosi {0}", min);
+//Z.3
+Console.WriteLine("Poczatek tablicy wynosi {0} a koniec {1}", min, max);
+//Z.4
+int vice_max = 10;
+for (int i = 0; i < T.Length; i++)
+{
+    if (vice_max < T[i])
+        if (T[i] < max)
+            vice_max = T[i];
+        
+}
+Console.WriteLine("maksymalna wartosc w tablicy wynosi {0}", vice_max);
+//Z.5
+int vice_min = 99;
+for (int i = 0; i < T.Length; i++)
+{
+    if (vice_min > T[i])
+        if (T[i] > min)
+            vice_min = T[i];
+
+}
+Console.WriteLine("maksymalna wartosc w tablicy wynosi {0}", vice_min);
+//Z.6
+int counter_max = 0;
+for (int i = 0; i < T.Length; i++)
+{
+    if (T[i] == max)
+    counter_max++;
+}
+Console.WriteLine("Najwiekszy element {0} wystepuje {1} razy",max, counter_max);
+//Z.7
+int counter_min = 0;
+for (int i = 0; i < T.Length; i++)
+{
+    if (T[i] == min)
+        counter_min++;
+}
+Console.WriteLine("Najwiekszy element {0} wystepuje {1} razy", min, counter_min);
+//Z.8
+int n = int.Parse(Console.ReadLine());
+int counter_los = 0;
+for (int i = 0; i < T.Length; i++)
+{
+    if (T[i] == n)
+        counter_los++;
+}
+Console.WriteLine("Najwiekszy element {0} wystepuje {1} razy", n, counter_los);
+//Z.9
+double average = T.Average();
+Console.WriteLine("Srednia elementow w tablicy wynosi {0}",average);
+
+//Z.10
+int sum = 0;
+for (int i = 0; i < T.Length; i+= 2)
+{
+    sum += T[i];
+}
+Console.WriteLine(sum);
+//Z.11
+int sum = 0;
+int counter = 0;
+for (int i = 0;i < T.Length;i++)
+{
+    sum += T[i];
+    counter++;
+}
+double average = (double)sum / counter;
+Console.WriteLine(average);
+//Z.12
+int counter_z12 = 0;
+int singel_z12 = 0;
+for (int i = 0; i < T.Length; i++)
+{
+    counter_z12 = 0;
+    for (int j = 0; j < T.Length; j++)
+    {
+        if (T[i] == T[j] && i != j)
+            counter_z12++; 
+            
+    }
+    if (counter_z12 == 0)
+        singel_z12++;
+}
+Console.WriteLine("Pojedzyncze elementy wystepuja w tablicy {0} razy", singel_z12);
+//Z.13
+Console.WriteLine("W tablicy nie wystepuja liczby");
+for (int i = 10; i < 100; i++)
+{
+    for (int j = 0; j < T.Length; j++)
+    {
+        if (i == T[j])
+        {
+            break;
+        }
+        if (j == (T.Length- 1))
+        {
+            Console.Write(i);
+            Console.Write(' ');
+        }
+    }
+}
+//Z.14
+int counter_z14 = 0;
+int to_remove = 0;
+for (int i = 0; i < T.Length; i++)
+{
+    counter_z14 = 0;
+    for (int j = i; j < T.Length; j++)
+    {
+        if (T[i] == T[j] && i != j)
+        {
+            counter_z14++;
+            break;
+        }
+        //1 2 3 2 2 5 7 2 
+    }
+    if (counter_z14 > 0)
+        to_remove = to_remove+counter_z14;
+}
+Console.WriteLine("ilosc elementow do usuniecia wynosi {0}", to_remove);
+//Z.15
+// 20 10 1 2 5 17 30 1 4 2 
+int counter_z15 = 0;
+int longest = 0;
+int idx = 0;
+for (int i = 0; i < T.Length; i++)
+{
+    counter_z15 = 1;
+    for (int j = i; j < T.Length; j++)
+    {
+        if ((j + 1) < T.Length)
+        {
+            if (T[j] <= T[j + 1])
+                counter_z15++;
+            else
+            {
+                break;
+            }
+
+        }
+    }
+    if (counter_z15 > longest)
+    {
+        longest = counter_z15;
+        idx = i;
+    }
+}
+Console.WriteLine("Najdluzszy ciag wynosi {0} i zaczyna sie pod indexem {1}",longest, idx);
+
+Random r  = new Random();
+int n = 13;
+int m = 7;
+int[,] T = new int[n, m];
+for (int i = 0; i < T.GetLength(0); i++)
+{
+    for (int j = 0; j < T.GetLength(1); j++)
+    {
+        T[i, j] = r.Next(100,1000);
+        Console.Write(T[i, j]+ "\t");
+    }
+    Console.WriteLine();
+}
+
+namespace Enumy
+{
+    enum dni { pon,wto}
+    class igor
+    {
+        public static void Main()
+        {
+            Console.WriteLine(dni.pon);
+        }
+    }
+}
+*/

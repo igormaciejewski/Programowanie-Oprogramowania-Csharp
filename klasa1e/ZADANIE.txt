@@ -1,0 +1,52 @@
+//zadanie 1 
+//zapisz losowymi tablice z 15 liczbami dwucyfrowymi nieparzystymi
+Random random = new Random();
+int[] tablica = new int[15];
+int counter = 0;
+for (;counter < 15;)
+{
+    int number = random.Next(10, 100);
+        if (number % 2 == 1)
+        {
+            tablica[counter] = number;
+            counter++;
+        }
+}
+for (int i = 0;i < 15;i++)
+{   
+
+    Console.WriteLine(tablica[i]);
+}
+//zadanie2
+//zapisz losowa tablice 20 dowolnym liczbami i zaokraglij ja do 10
+//zadanie3
+//zapisz tablice 12 losowych liczb dwucyfrowych podzielnych przez 7
+//zadanie4
+//zapisz tablice 10 losowych liczb pierwszych
+Random random = new Random();
+int[] tablica = new int[15];
+int counter = 0;
+for (;counter < 15;)
+{
+    int number = random.Next(10, 100);
+    bool isprime = true;
+    for (int i = 2; i < number; i++)
+    {
+        if (number % i == 0)
+        {
+            isprime = false;
+            break;
+        }
+    }
+    if (isprime == true)
+    {
+        tablica[counter] = number;
+        counter++;
+
+    }
+}
+for (int i = 0;i < 15;i++)
+{   
+
+    Console.WriteLine(tablica[i]);
+}

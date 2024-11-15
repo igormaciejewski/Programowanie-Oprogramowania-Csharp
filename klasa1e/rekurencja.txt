@@ -1,0 +1,19 @@
+//rekurencje
+void r1(int n)
+{
+    if (n == 0)
+    {
+        return;
+    }
+    r1(n - 1);
+    Console.WriteLine(n);
+}
+r1(5);
+
+
+int sumer(int n)
+{
+    if (n == 0) return 0;
+    return sumer(n-1) + n;
+}
+Console.WriteLine(sumer(10));

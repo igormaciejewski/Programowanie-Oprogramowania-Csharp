@@ -1,0 +1,85 @@
+Z.1
+
+
+Z.2
+
+int a = int.Parse(Console.ReadLine ());
+int b = int.Parse(Console.ReadLine ());
+int c = int.Parse(Console.ReadLine ());
+int d = int.Parse(Console.ReadLine ());
+int dol = b * d;
+a = a * d;
+c = c * b;
+int gora = a + c;
+Console.WriteLine(gora);
+Console.WriteLine(dol);
+if (gora > dol)
+{
+    Console.WriteLine("ulamek niewlasciwy");
+}
+else
+{
+    Console.WriteLine("normalny");
+}
+
+Z.3
+
+int a = int.Parse(Console.ReadLine ());
+int b = int.Parse(Console.ReadLine ());
+int c = int.Parse(Console.ReadLine ());
+int d = int.Parse(Console.ReadLine ());
+int dol = b * d;
+a = a * d;
+c = c * b;
+int gora = a + c;
+Console.WriteLine(gora);
+Console.WriteLine(dol);
+if (gora > dol)
+{
+    Console.WriteLine("nigger");
+}
+else
+{
+    Console.WriteLine("odwrot");
+}
+
+Z.4
+
+int samo = 0;
+int spol = 0;
+string napis = Console.ReadLine();
+for  (int i = 0; i < napis.Length; i++)
+{
+    if (napis[i] == 'a' || napis[i] == 'e' || napis[i] == 'i' || napis[i] == 'o' || napis[i] == 'u' || napis[i] == 'ó' || napis[i] == 'y' || napis[i] == 'ę' || napis[i] == 'ą')
+    {
+        samo++;
+    }
+    else
+    {
+        spol++;
+    }
+}
+Console.WriteLine(spol);
+Console.WriteLine(samo);
+if (samo > spol)
+{
+    Console.WriteLine("samoglosek jest wiecej");
+}
+else if (spol > samo)
+{
+    Console.WriteLine("spolglosek jest wiecej");
+}
+else
+{
+    Console.WriteLine("jest po rowno");
+}
+
+Z.5
+
+string napis = Console.ReadLine();
+char[] literki = napis.ToCharArray();
+
+int[] ints = new int[130];
+foreach (char c in literki)
+    ints[(int)c]++;
+Console.WriteLine(literki[ints.Max()]);

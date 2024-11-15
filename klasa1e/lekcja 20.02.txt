@@ -1,0 +1,122 @@
+//Arraye
+using System.Collections;
+
+ArrayList AL = new ArrayList();
+AL.Add(1);
+AL.Add(2);
+AL.Add(3);
+AL.Add(4);
+// ..... ile chce arrayow
+
+Console.WriteLine(AL.Count);
+Console.WriteLine(AL[2]);
+AL.Remove(1);
+Console.WriteLine(AL.Count);
+AL.Remove(2);
+Console.WriteLine(AL.Count);
+
+//petla array - mozna stosowac for i foreach
+
+for (int i = 0; i< AL.Count; i++)
+{
+    Console.WriteLine(AL[i] + " ");
+}
+Console.WriteLine();
+
+foreach (var item in AL)
+{
+    Console.WriteLine(item + " ");
+
+}
+Console.WriteLine();
+
+//enumy na ratunek
+namespace Enumy
+{
+    enum dni { pon, wt, sr, czw, pt }
+
+    class Alex
+    {
+        public static void Main()
+        {
+            Console.WriteLine(dni.pon);
+        }
+
+    }
+
+}
+// zadanie 
+//zadanie 1 
+//zapisz losowymi tablice z 15 liczbami dwucyfrowymi nieparzystymi
+Random r = new Random();
+int n = 20;
+int[] L = new int[n];
+
+for (int i = 0; i < n; i++)
+{
+    L[i] = r.Next(5,50) * 2 + 1;
+    Console.WriteLine(L[i]);
+}
+Console.WriteLine("\n");
+
+//zadanie2
+//zapisz losowa tablice 20 dowolnym liczbami i zaokraglij ja do 10
+Random r = new Random();
+int n = 20;
+int[] L = new int[n];
+
+for (int i = 0; i < n; i++)
+{
+    L[i] = r.Next(10,101)/10 * 10;
+    Console.WriteLine(L[i]);
+}
+Console.WriteLine("\n");
+//zadanie3
+//zapisz tablice 12 losowych liczb dwucyfrowych podzielnych przez 7
+Random r = new Random();
+int n = 12;
+int[] L = new int[n];
+
+for (int i = 0; i < n; i++)
+{
+    L[i] = r.Next(10,101)/7 * 7;
+    Console.WriteLine(L[i]);
+}
+Console.WriteLine("\n");
+
+//zadanie4
+//zapisz tablice 10 losowych liczb pierwszych
+using System.Globalization;
+
+Random r = new Random();
+int n = 10;
+int[] L = new int[n];
+int j = 0;
+while (true)
+{
+    bool flaga = true;
+    int x = r.Next(10, 100);
+    for (int i = 2; i < x / 2 + 1; i++)
+    {
+        if (i % x == 0)
+        {
+            flaga = false;
+            break;
+        }
+    }
+    if (flaga)
+    {
+        L[j] = x;
+        j++;
+    }
+    if (j == 10)
+    {
+        break;
+    }
+}
+for (int i = 0 ; i < L.Length; i++)
+{
+    Console.WriteLine(L[i] + " ");
+}
+Console.WriteLine();
+
